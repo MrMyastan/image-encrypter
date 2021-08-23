@@ -9,6 +9,10 @@ from math import ceil
 
 from chacha import chacha20_byte_generator
 
+if sys.argv[1] == "help" or sys.argv[1] == "-h" or sys.argv[1] == "--help":
+    print(f"Usage for {sys.argv[0]}: [encrypt || decrypt] [photo file] [key]")
+    sys.exit()
+
 if len(sys.argv) != 4:
     raise SystemExit(f"Usage for {sys.argv[0]}: [encrypt || decrypt] [photo file] [key]")
 
